@@ -54,4 +54,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Measurements::class);
     }
+
+    public function progress_log()
+    {
+        return $this->hasMany(ProgressLog::class);
+    }
+
+    public function workout()
+    {
+        return $this->hasMany(CustomWorkout::class);
+    }
 }
